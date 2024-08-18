@@ -2069,4 +2069,115 @@ footer {
 }
 .blog-search button:hover {
   opacity: 1;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 115px;
+}
+@media (max-width: 991px) {
+  .products-list {
+    gap: 40px;
+  }
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 767px) {
+  .product-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.product-item .product-img {
+  width: 46%;
+  max-width: 703px;
+  aspect-ratio: 703/431;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .product-item .product-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .product-item .product-text {
+    text-align: center;
+  }
+}
+.product-item .product-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #164478;
+  margin: 0 0 20px;
+}
+.product-item .product-title a {
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.product-item .product-title a:hover {
+  color: #58baa4;
+}
+@media (max-width: 1569px) {
+  .product-item .product-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 991px) {
+  .product-item .product-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+}
+.product-item .product-description {
+  font-size: 24px;
+  font-weight: 500;
+  color: #164478;
+  margin: 0 0 50px;
+}
+@media (max-width: 1569px) {
+  .product-item .product-description {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 991px) {
+  .product-item .product-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+.product-item .product-btn {
+  width: 230px;
+  height: 60px;
+}
+@media (max-width: 1569px) {
+  .product-item .product-btn {
+    width: 180px;
+    height: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .product-item .product-btn {
+    width: 135px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .product-item .product-btn {
+    width: 180px;
+    height: 50px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=main.css.map */
