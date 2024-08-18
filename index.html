@@ -33,7 +33,6 @@
                 <i class="far fa-times"></i>
               </button>
               <div class="header-tools">
-                <a href="#!" class="header-btn"> اطلب خدمة </a>
                 <div class="lang-content">
                   <button class="selected-lang">
                     <span class="text">عربي</span>
@@ -101,7 +100,14 @@
             </ul>
           </nav>
           <div class="header-tools">
-            <a href="#!" class="header-btn"> اطلب خدمة </a>
+            <a
+              type="button"
+              class="header-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#requestModal"
+            >
+              اطلب خدمة
+            </a>
             <div class="lang-content">
               <button class="selected-lang">
                 <span class="text">عربي</span>
@@ -728,7 +734,13 @@
                     <a href="index.html">الرئيسية</a>
                   </li>
                   <li>
-                    <a href="#!">احصل على خدمة</a>
+                    <a
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#requestModal"
+                    >
+                      احصل على خدمة
+                    </a>
                   </li>
                   <li>
                     <a href="contact.html">اتصل بنا</a>
@@ -806,6 +818,122 @@
       </div>
     </footer>
     <!-- End Footer -->
+
+    <div
+      class="modal fade request-modal"
+      id="requestModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-head">
+              <h3 class="modal-subtitle">تواصل معنا</h3>
+              <h2 class="modal-title">اطلب خدمتك، الان</h2>
+            </div>
+            <form>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="اسمك الكامل"
+                  class="custom-input"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  placeholder="رقم جوالك ( مثال: *********966+ )"
+                  class="custom-input"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  placeholder="بريدك الإلكتروني"
+                  class="custom-input"
+                />
+              </div>
+              <div class="form-grid">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="اسم شركتك (إن وجد)"
+                    class="custom-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="مسماك الوظيفي"
+                    class="custom-input"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="اخبرنا كيف يمكننا مساعدتك"
+                  class="custom-input"
+                ></textarea>
+              </div>
+              <button
+                type="button"
+                class="default-btn submit-btn"
+                data-bs-dismiss="modal"
+                data-bs-toggle="modal"
+                data-bs-target="#successModal"
+              >
+                ارسل طلبك
+              </button>
+              <p class="form-hint">
+                بعد ارسالك سيتم الرد عليك في اسرع وقت ممكن، كن على تواصل*
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade success-modal"
+      id="successModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body success-body">
+            <div class="modal-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="modal-head">
+              <h2 class="modal-title">تم إرسال طلبك</h2>
+              <h3 class="modal-subtitle">
+                ارسلنا لك رسالة تأكيد على الايميل، الق نظرة
+              </h3>
+            </div>
+            <div class="modal-btns">
+              <button
+                type="button"
+                class="default-btn submit-btn"
+                data-bs-dismiss="modal"
+                data-bs-toggle="modal"
+                data-bs-target="#requestModal"
+              >
+                إرسال طلب اخر
+              </button>
+              <button
+                type="button"
+                class="default-btn cancel-btn"
+                data-bs-dismiss="modal"
+              >
+                إنهاء
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
