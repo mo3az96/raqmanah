@@ -149,4 +149,17 @@ $(document).ready(function () {
       $(".footer-title").not(this).siblings().slideUp(500);
     });
   }
+
+  /************************************ About ************************************/
+  $(".scroll-btn").on("click", (e) => {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $("html, body").animate(
+      {
+        scrollTop: $("#about").offset().top,
+      },
+      1000
+    );
+  });
 });
