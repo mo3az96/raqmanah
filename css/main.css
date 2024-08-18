@@ -363,13 +363,13 @@ html[dir=ltr] select {
     margin-bottom: 40px;
   }
 }
-.services-page .section-head {
+.page-content .section-head {
   text-align: start;
   align-items: start;
   margin-bottom: 55px;
 }
 @media (max-width: 991px) {
-  .services-page .section-head {
+  .page-content .section-head {
     text-align: center;
     align-items: center;
     margin-bottom: 40px;
@@ -1123,6 +1123,15 @@ html[dir=ltr] .product-home .product-btn::after {
 .product-home:hover .product-text {
   visibility: visible;
   opacity: 1;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .blog-item {
@@ -1985,4 +1994,79 @@ footer {
   .contact-section {
     padding: 50px 0 80px;
   }
+}
+
+.blog-head {
+  display: flex;
+  align-items: flex-end;
+  gap: 11px;
+  margin-bottom: 100px;
+}
+.blog-head .section-head {
+  margin: 0;
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .blog-head {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.blog-search {
+  width: 42%;
+  max-width: 643px;
+  flex-shrink: 0;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .blog-search {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.blog-search input {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid #f6f6f6;
+  padding: 0 28px;
+  padding-inline-start: 68px;
+  font-size: 23px;
+  font-weight: 500;
+  color: #164478;
+  background-color: #f6f6f6;
+  transition: all 0.3s ease-in-out;
+}
+.blog-search input::-moz-placeholder {
+  color: #164478;
+  opacity: 0.49;
+  font-size: 22px;
+  font-weight: 500;
+}
+.blog-search input::placeholder {
+  color: #164478;
+  opacity: 0.49;
+  font-size: 22px;
+  font-weight: 500;
+}
+.blog-search input:focus {
+  border-color: #58baa4;
+}
+.blog-search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-start: 28px;
+  color: #164478;
+  opacity: 0.5;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.blog-search button:hover {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
