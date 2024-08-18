@@ -2455,6 +2455,7 @@ footer {
 @media (max-width: 991px) {
   .about-main {
     padding: 250px 0 70px;
+    height: auto;
     min-height: auto;
     background-image: none;
     background-color: #164478;
@@ -2554,8 +2555,8 @@ footer {
 }
 @media (max-width: 991px) {
   .about-main .aboutMain-img {
-    width: 100%;
-    max-width: 360px;
+    width: 360px;
+    max-width: 100%;
   }
 }
 .about-main .aboutMain-feature {
