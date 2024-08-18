@@ -102,6 +102,39 @@ $(document).ready(function () {
       },
     },
   });
+  /************************************ Related Slider ************************************/
+  var relatedSwiper = new Swiper(".related-slider .swiper", {
+    loop: true,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      1199: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1569: {
+        slidesPerView: 2,
+        spaceBetween: 54,
+      },
+    },
+    pagination: {
+      el: ".related-slider .swiper-pagination",
+      clickable: true,
+    },
+
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
 
   /************************************ Footer ************************************/
   if ($(window).width() <= 767) {
