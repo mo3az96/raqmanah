@@ -893,6 +893,7 @@ html[dir=rtl] .custom-input {
 .service-item {
   width: 100%;
   aspect-ratio: 306/278;
+  overflow: hidden;
   border: 0.5px solid #164478;
   border-radius: 20px;
   display: flex;
@@ -900,6 +901,21 @@ html[dir=rtl] .custom-input {
   align-items: center;
   justify-content: center;
   padding: 30px;
+  position: relative;
+}
+.service-item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  width: 120px;
+  aspect-ratio: 120/68;
+  background-image: url(../images/shapes/service.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+html[dir=ltr] .service-item:after {
+  transform: scaleX(-1);
 }
 .service-item .service-img {
   display: flex;
@@ -908,6 +924,7 @@ html[dir=rtl] .custom-input {
   width: 123px;
   aspect-ratio: 123/95;
   margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
 }
 .service-item .service-title {
   font-size: 21px;
@@ -1046,6 +1063,9 @@ html[dir=rtl] .custom-input {
   align-items: center;
   justify-content: center;
 }
+.product-home .product-img img {
+  transition: all 0.3s ease-in-out;
+}
 .product-home .product-text {
   position: absolute;
   top: 0;
@@ -1115,6 +1135,9 @@ html[dir=ltr] .product-home .product-btn::after {
 }
 .product-home .product-btn:hover {
   color: #58baa4;
+}
+.product-home:hover .product-img img {
+  transform: scale(1.1);
 }
 .product-home:hover .product-text {
   visibility: visible;
@@ -2080,6 +2103,10 @@ footer {
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+.product-item .product-img:hover {
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 767px) {
   .product-item .product-img {
@@ -2561,6 +2588,7 @@ footer {
 }
 .about-main .aboutMain-feature {
   position: absolute;
+  transition: all 0.3s ease-in-out;
 }
 .about-main .aboutMain-feature:first-of-type {
   top: 100px;
@@ -2659,6 +2687,9 @@ footer {
     inset-inline-end: 0;
     top: calc(100% + 5px);
   }
+}
+.about-main .aboutMain-feature:hover {
+  transform: translateY(-15px);
 }
 .about-main .aboutMain-feature:hover .aboutMain-text {
   visibility: visible;
